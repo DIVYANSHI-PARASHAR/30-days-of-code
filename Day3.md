@@ -16,17 +16,21 @@ If n is even and greater than 20, print Not Weird
 Complete the stub code provided in your editor to print whether or not n is weird.
 
 
+
 Input Format:
 
 A single line containing a positive integer, n.
 
 
+
 Constraints: 1 <= n <= 100
+
 
 
 Output Format:
 
 Print Weird if the number is weird; otherwise, print Not Weird.
+
 
 Sample Input 0
 
