@@ -111,3 +111,40 @@ Three years pass and the person is still old at age = 21, so we print the old me
 The extra line at the end of the output is supposed to be there and is trimmed before being compared against the test case's expected output. 
 
 If you're failing this challenge, check your logic and review your print statements for spelling errors.
+
+
+
+SOLUTION:
+
+          import re
+          import math
+
+          class Person:
+              def __init__(self,initialAge):
+                  self.age = initialAge
+                  # Add some more code to run some checks on initialAge
+              def amIOld(self):
+                  if self.age in range(-5,0):
+                      print('Age is not valid, setting age to 0.')
+                      self.age = 0
+
+                  if self.age in range(0,13):
+                      print('You are young.')
+                  if self.age in range(13,18):
+                      print('You are a teenager.')
+                  if self.age > 17:
+                      print('You are old.')
+                  # Do some computations in here and print out the correct statement to the console
+              def yearPasses(self):
+                  self.age = self.age + 1
+                  # Increment the age of the person in here
+
+          t = int(input())
+          for i in range(0, t):
+              age = int(input())         
+              p = Person(age)  
+              p.amIOld()
+              for j in range(0, 3):
+                  p.yearPasses()       
+              p.amIOld()
+              print("")
